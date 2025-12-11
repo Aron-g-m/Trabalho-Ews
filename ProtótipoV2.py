@@ -87,7 +87,7 @@ class Produto:
         return self._componentes.obter_preco()
 
     def preco_total(self) -> float:
-        return self.obter_preco() * (1.0 + self._tax)
+        return self.obter_preco() * (1.0 + self._tax/100)
 
     def imprimir_info(self) -> None:
         print(f"Produto = {self._nome}")
